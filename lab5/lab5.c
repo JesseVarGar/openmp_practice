@@ -23,6 +23,7 @@ void main()
 	srand((unsigned) time(&t));
 	int myInts[100000];
 	int histogram[bins];
+	omp_set_dynamic(0);
 	omp_set_num_threads(omp_get_max_threads());
 	omp_lock_t locks[bins];
 	
